@@ -7,18 +7,13 @@ Jump right into developing an RxJS driven front end application. This app includ
 Fork the repo, clone it locally.
 
 ### Install
-`yarn`
-
-or
-
-`npm i`
+`yarn` or `npm i`
 
 ### Run
-`yarn start`
+`yarn start` or `npm start`
 
-or
-
-`npm start`
+## How?
+Working with rx-jsx https://github.com/taterer/rx-jsx/tree/main/package
 
 ## Why?
 Fast, easy, domain driven design.
@@ -41,13 +36,11 @@ https://github.com/taterer/rx-jsx
 Router
 https://github.com/taterer/rx-router
 
-### Debugging
+## Debugging
 Don't forget about this tool!
 https://github.com/taterer/rxjs-debugger
 
-### Learning
-Working with rx-jsx https://github.com/taterer/rx-jsx/tree/main/package
-
+## Learning
 The UI https://github.com/taterer/rx-jsx repository has exercises to learn RxJS. Clone the repo and work through the exercises in your development environment.
 
 Other great resources include: https://rxjs.dev/ and https://www.rxjs-fruits.com/
