@@ -46,6 +46,6 @@ Don't forget about this tool!
 https://github.com/taterer/rxjs-debugger
 
 ### Learning
-The UI https://github.com/taterer/rx-jsx has exercises to learn RxJS. Clone the repo and work the the exercises in your development environment.
+The UI https://github.com/taterer/rx-jsx has exercises to learn RxJS. Clone the repo and work through the exercises in your development environment.
 
 Other great resources include: https://rxjs.dev/ and https://www.rxjs-fruits.com/
