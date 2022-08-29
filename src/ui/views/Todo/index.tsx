@@ -81,7 +81,7 @@ export default function TodoApp ({ destruction$ }) {
         <div single$={input$} />
         <div single$={add$} />
       </div>
-      <div id='todo-list' multi$={todolist$} />
+      <div multi$={todolist$} />
       <div single$={clear$} />
     </div>
   )
