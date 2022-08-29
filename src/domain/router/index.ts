@@ -1,14 +1,17 @@
 export enum Route {
   home = 'home',
-  rxjsx = 'rxjsx',
+  memory = 'memory',
+  todo = 'todo',
 }
 
 export const routePathMap: { [key in Route]: string } = {
   home: '',
-  rxjsx: 'rxjsx'
+  memory: 'memory',
+  todo: 'todo',
 }
 
 export const routeRegExpMap: { [key in Route]: RegExp } = {
   home: /^$/,
-  rxjsx: /^rxjsx$/,
+  memory: /^memory$/,
+  todo: /^todo$/,
 }

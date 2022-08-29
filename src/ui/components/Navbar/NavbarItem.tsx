@@ -2,11 +2,10 @@ import { of, takeUntil, withLatestFrom } from 'rxjs'
 import { classSync } from '@taterer/rx-jsx'
 import { pushHistory, firstPathChange$ } from '@taterer/rx-router';
 import { routePathMap, routeRegExpMap } from '../../../domain/router';
-import { css } from '@emotion/css';
 
 export default function NavbarItem ({ destruction$, title, route }) {
   const navbarItem$ = of<Element>(
-    <a class={css`
+    <a style={`
       padding: 15px;
     `} href={`/${routePathMap[route]}`} onClick={event => {
       if (!event.ctrlKey) {

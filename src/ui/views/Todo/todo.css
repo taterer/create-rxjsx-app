@@ -1,0 +1,9 @@
+.disabled {
+  cursor: help;
+  background-color: gray;
+}
+
+.enabled {
+  cursor: pointer;
+  background-color: lightblue;
+}

@@ -1,11 +1,10 @@
-import { css } from '@emotion/css'
 import { EMPTY } from 'rxjs'
 import Navbar from './components/Navbar'
 import Router from './components/Router'
 
 export default function App () {
   return (
-    <div class={css`
+    <div style={`
       display: flex;
       flex-direction: column;
       justify-content: left;
