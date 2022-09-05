@@ -1,32 +1,24 @@
-import { concatMap, from, shareReplay, switchMap } from "rxjs";
-import { eventFactory } from "@taterer/rx-entity";
-import { IndexedDbEntity, withIndexedDb } from "../../persistence/indexed-db";
-import { Todo } from "./event";
+import { concatMap, filter, from, merge, Observable, switchMap } from "rxjs";
+import { indexedDB$, IndexedDBEntity } from "../../persistence/indexed-db";
+import { Todo, todoEntity$ } from "./event";
+import { TodoEvent } from "./command";
 
-export enum TodoQuery {
-  load = 'load'
-}
-
-export interface LoadAllTodo {}
-
-export const [_loadAllTodo$, loadAllTodo] = eventFactory<LoadAllTodo>({ entity: IndexedDbEntity.todo, eventType: TodoQuery.load })
-
-export const loadAllTodoResponse$ = _loadAllTodo$
+export function getAllTodos(): Observable<Todo> {
+  return indexedDB$
   .pipe(
-    withIndexedDb(),
-    switchMap(([event, db]) => db.query(event.meta.entity as IndexedDbEntity)),
+    concatMap(db => db.query(IndexedDBEntity.todo)),
     switchMap(values => from(values as Todo[])),
   )
-
-export interface GetTodo {
-  id: string
 }
 
-export const [_getTodo$, getTodo] = eventFactory<GetTodo>({ entity: IndexedDbEntity.todo, eventType: TodoQuery.load })
-
-export const getTodoResponse$ = _getTodo$
-  .pipe(
-    withIndexedDb(),
-    concatMap(([event, db]) => db.get(IndexedDbEntity.todo, event.id)),
-    shareReplay<Todo>(20),
-  )
+export function getTodo(id): Observable<Todo & {
+  meta: {
+      entity: IndexedDBEntity;
+      eventType: TodoEvent;
+  };
+}> {
+  return merge(
+    indexedDB$.pipe(concatMap(db => db.get(IndexedDBEntity.todo, id))),
+    todoEntity$.pipe(filter(i => i.id === id))
+  ).pipe(filter(i => !!i))
+}

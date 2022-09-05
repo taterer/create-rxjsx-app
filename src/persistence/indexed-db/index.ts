@@ -1,20 +1,20 @@
 import { from } from 'rxjs'
 import { shareReplay, withLatestFrom } from 'rxjs/operators'
-import { indexedDbFactory } from '@taterer/persist-indexed-db'
+import { indexedDbFactory as indexedDBFactory } from '@taterer/persist-indexed-db'
 import { Persistable, Persistence } from '@taterer/persist'
 
-export enum IndexedDbEntity {
+export enum IndexedDBEntity {
   todo = 'todo'
 }
 
-async function indexedDbPersistence (): Promise<Persistence<any & Persistable, IndexedDbEntity>> {
+async function indexedDBPersistence (): Promise<Persistence<any & Persistable, IndexedDBEntity>> {
   const databaseName = 'db-create-rxjsx-app'
 
   try {
     // Increment the version number anytime the database schema changes
-    const indexedDb = await indexedDbFactory<IndexedDbEntity>(databaseName, 1, [
+    const indexedDb = await indexedDBFactory<IndexedDBEntity>(databaseName, 1, [
       {
-        name: IndexedDbEntity.todo,
+        name: IndexedDBEntity.todo,
         options: {
           keyPath: 'id'
         }
@@ -28,8 +28,8 @@ async function indexedDbPersistence (): Promise<Persistence<any & Persistable, I
   }
 }
 
-export const indexedDb$ = from(indexedDbPersistence()).pipe(shareReplay(1))
+export const indexedDB$ = from(indexedDBPersistence()).pipe(shareReplay(1))
 
-export function withIndexedDb<Entity> () {
-  return withLatestFrom<Entity, [Persistence<any & Persistable, IndexedDbEntity>]>(indexedDb$)
+export function withIndexedDB<Entity> () {
+  return withLatestFrom<Entity, [Persistence<any & Persistable, IndexedDBEntity>]>(indexedDB$)
 }
