@@ -1,15 +1,12 @@
-import { filter, mergeWith, map, takeUntil, Subject } from "rxjs"
+import { map, takeUntil, Subject } from "rxjs"
 import { completeTodo, redoTodo } from "../../../domain/todo/command"
-import { todoEntity$ } from "../../../domain/todo/event"
-import { getTodo, getTodoResponse$ } from "../../../domain/todo/query"
+import { getTodo } from "../../../domain/todo/query"
 
 export default function Todo ({ destruction$, id }) {
   const destroy$ = new Subject()
 
-  const todo$ = todoEntity$
+  const todo$ = getTodo(id)
   .pipe(
-    mergeWith(getTodoResponse$),
-    filter(todo => todo.id === id),
     map(todo => {
       if (todo.deleted) {
         destroy$.next(undefined)
@@ -36,8 +33,6 @@ export default function Todo ({ destruction$, id }) {
     takeUntil(destruction$),
     takeUntil(destroy$)
   )
-
-  setTimeout(() => getTodo({ id }))
 
   return (
     <div single$={todo$} />
