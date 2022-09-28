@@ -1,6 +1,6 @@
 import { from } from 'rxjs'
 import { shareReplay, withLatestFrom } from 'rxjs/operators'
-import { indexedDbFactory as indexedDBFactory } from '@taterer/persist-indexed-db'
+import { indexedDBFactory } from '@taterer/persist-indexed-db'
 import { Persistable, Persistence } from '@taterer/persist'
 
 export enum IndexedDBEntity {

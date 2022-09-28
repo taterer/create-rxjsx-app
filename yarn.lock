@@ -979,10 +979,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@taterer/persist-indexed-db@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/@taterer/persist-indexed-db/-/persist-indexed-db-1.0.4.tgz"
-  integrity sha512-NqV16OjrAx2gljvajl7xfx5u93ajlq+WimIow0vLEKHbcQ3aw1bZqHLTlFgSgbtln60Yio12sf9FbOGjx3Zntw==
+"@taterer/persist-indexed-db@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@taterer/persist-indexed-db/-/persist-indexed-db-1.0.5.tgz#adfe43dcfd9b0f63adab0ffed2565f20efffce7c"
+  integrity sha512-9Hu/fI/Rxq8+OOUU278IFhGezGr6xwCuvbUqLWrZqjneVIVEP/lmi2yAAfwAvsVvju424uY9qbctpR+GhtMnbw==
   dependencies:
     "@taterer/persist" "^1.0.3"
 
@@ -1010,10 +1010,10 @@
   resolved "https://registry.yarnpkg.com/@taterer/rx-entity/-/rx-entity-1.0.1.tgz#4862308e6408380ca505aaa86338ee3252bc65d7"
   integrity sha512-BmepoZRQYcPkAeOldoE3Ktmjt72yBfCPDh09Jm8pxKJ9QtnCWXPw43d3e401F+1LN7npV5OOqwuHRv8WEkFqQQ==
 
-"@taterer/rx-jsx@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/@taterer/rx-jsx/-/rx-jsx-1.0.2.tgz"
-  integrity sha512-Me6okVFJ3Qq0cT+XHH5NUAalK/HoxaHeiAOyQPAr+jeH5UVzvoOT02v5X9ke9kuyYBFjlQd5VAja7OSWDRjoZw==
+"@taterer/rx-jsx@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@taterer/rx-jsx/-/rx-jsx-1.0.3.tgz#a8e3fbe23a4659f968abc636cc05d617e41ba552"
+  integrity sha512-dKJKEtyPsx75sv383XuYLFKqNL+vyhUssK5cgR6HfY30f+v5aOueL1evdzP7hjLh/Qe3bP9zTiqCLPaaGFnndA==
 
 "@taterer/rx-router@^1.0.2":
   version "1.0.2"
@@ -1573,10 +1573,10 @@ resolve-from@^4.0.0:
   resolved "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz"
   integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
 
-rxjs@^7.5.6:
-  version "7.5.6"
-  resolved "https://registry.npmjs.org/rxjs/-/rxjs-7.5.6.tgz"
-  integrity sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==
+rxjs@^7.5.7:
+  version "7.5.7"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.7.tgz#2ec0d57fdc89ece220d2e702730ae8f1e49def39"
+  integrity sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==
   dependencies:
     tslib "^2.1.0"
 
