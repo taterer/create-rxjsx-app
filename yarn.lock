@@ -1010,10 +1010,10 @@
   resolved "https://registry.yarnpkg.com/@taterer/rx-entity/-/rx-entity-1.0.1.tgz#4862308e6408380ca505aaa86338ee3252bc65d7"
   integrity sha512-BmepoZRQYcPkAeOldoE3Ktmjt72yBfCPDh09Jm8pxKJ9QtnCWXPw43d3e401F+1LN7npV5OOqwuHRv8WEkFqQQ==
 
-"@taterer/rx-jsx@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@taterer/rx-jsx/-/rx-jsx-1.0.3.tgz#a8e3fbe23a4659f968abc636cc05d617e41ba552"
-  integrity sha512-dKJKEtyPsx75sv383XuYLFKqNL+vyhUssK5cgR6HfY30f+v5aOueL1evdzP7hjLh/Qe3bP9zTiqCLPaaGFnndA==
+"@taterer/rx-jsx@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@taterer/rx-jsx/-/rx-jsx-1.0.4.tgz#02a3e4f6970fa84a0d4a47fff14680b8d471b523"
+  integrity sha512-D5+d5YDR9ijcLIqRVo13Tcgq53lAz1CsxBH5Bmxma5e7jfifYhHElwgOltmES1XqFutKrHZp4XO4glREAYW8tw==
 
 "@taterer/rx-router@^1.0.2":
   version "1.0.2"
