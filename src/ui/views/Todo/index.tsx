@@ -2,8 +2,8 @@ import { classSync, fromEventElement$, fromValueElementKeyup$ } from "@taterer/r
 import { filter, map, mergeWith, of, takeUntil, withLatestFrom } from "rxjs";
 import { newTodo, removeTodo, TodoEvent } from "../../../domain/todo/command";
 import { todoEntity$ } from "../../../domain/todo/event";
-import { loadAllTodo, loadAllTodoResponse$ } from "../../../domain/todo/query";
-import { IndexedDbEntity, withIndexedDb } from "../../../persistence/indexed-db";
+import { getAllTodos } from "../../../domain/todo/query";
+import { IndexedDBEntity, withIndexedDB } from "../../../persistence/indexed-db";
 import Todo from "../../components/Todo";
 import './todo.css'
 
@@ -11,13 +11,10 @@ export default function TodoApp ({ destruction$ }) {
   const todolist$ = todoEntity$
   .pipe(
     filter(todo => todo.meta.eventType === TodoEvent.new),
-    mergeWith(loadAllTodoResponse$),
+    mergeWith(getAllTodos()),
     map(todo => <Todo destruction$={destruction$} id={todo.id} />),
     takeUntil(destruction$)
   )
-
-  // we need to wait to load until the subscription for the query has been created through rx-jsx
-  setTimeout(() => loadAllTodo({}), 0)
 
   const input$ = of(<input type="text" />)
   const add$ = of(<span class='disabled'
@@ -60,11 +57,11 @@ export default function TodoApp ({ destruction$ }) {
 
   fromEventElement$(clear$, 'click')
   .pipe(
-    withIndexedDb(),
+    withIndexedDB(),
     takeUntil(destruction$)
   )
   .subscribe(async ([_click, indexedDb]) => {
-    const allTodo = await indexedDb.query(IndexedDbEntity.todo)
+    const allTodo = await indexedDb.query(IndexedDBEntity.todo)
     allTodo.forEach(todo => {
       removeTodo({ id: todo.id })
     })

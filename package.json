@@ -34,11 +34,11 @@
   },
   "dependencies": {
     "@taterer/persist": "^1.0.3",
-    "@taterer/persist-indexed-db": "^1.0.4",
+    "@taterer/persist-indexed-db": "^1.0.5",
     "@taterer/persist-memory": "^1.0.5",
     "@taterer/rx-entity": "^1.0.1",
-    "@taterer/rx-jsx": "^1.0.2",
+    "@taterer/rx-jsx": "^1.0.3",
     "@taterer/rx-router": "^1.0.2",
-    "rxjs": "^7.5.6"
+    "rxjs": "^7.5.7"
   }
 }
