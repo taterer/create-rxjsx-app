@@ -16,7 +16,7 @@ Fork the repo, clone it locally.
 Working with rx-jsx https://github.com/taterer/rx-jsx/tree/main/package
 
 ## Why?
-Fast, easy, domain driven design.
+Fast, easy, domain driven design. Extended why: https://github.com/taterer/rx-jsx
 
 ### Compare to a create-react-app from install.
 Create react app: 1447 packages (6 high severity vulnerabilities), 48.38 kB gzip bundle.
