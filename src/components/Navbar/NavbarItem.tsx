@@ -1,7 +1,7 @@
 import { classSync } from "@taterer/rx-jsx";
 import { firstPathChange$, pushHistory } from "@taterer/rx-router";
 import { of, takeUntil, withLatestFrom } from "rxjs";
-import { routePathMap, routeRegExpMap } from "../../../domain/router";
+import { routePathMap, routeRegExpMap } from "../../domain/router";
 
 export default function NavbarItem({ destruction$, title, route }) {
   const navbarItem$ = of(

@@ -4,13 +4,13 @@ import {
   fromValueElementKeyup$,
 } from "@taterer/rx-jsx";
 import { filter, map, mergeWith, of, takeUntil, withLatestFrom } from "rxjs";
-import { newTodo, removeTodo, TodoEvent } from "../../../domain/todo/command";
-import { todoEntity$ } from "../../../domain/todo/event";
-import { getAllTodos } from "../../../domain/todo/query";
+import { newTodo, removeTodo, TodoEvent } from "../../domain/todo/command";
+import { todoEntity$ } from "../../domain/todo/event";
+import { getAllTodos } from "../../domain/todo/query";
 import {
   IndexedDBEntity,
   withIndexedDB,
-} from "../../../persistence/indexed-db";
+} from "../../persistence/indexed-db";
 import Todo from "../../components/Todo";
 import "./todo.css";
 

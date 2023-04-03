@@ -1,6 +1,6 @@
 import { filter, map, startWith, takeUntil } from "rxjs";
-import { incrementCounter } from "../../../domain/counter/command";
-import { counterEntity$ } from "../../../domain/counter/event";
+import { incrementCounter } from "../../domain/counter/command";
+import { counterEntity$ } from "../../domain/counter/event";
 
 export default function Counter({ destruction$, id }) {
   const counter$ = counterEntity$.pipe(

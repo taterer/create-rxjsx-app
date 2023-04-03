@@ -1,7 +1,26 @@
 {
   "compilerOptions": {
-    "lib": ["DOM", "ES2017"],
+    "outDir": "./dist/out-tsc",
+
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ESNext",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+  
     "jsx": "react",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
     "jsxFactory": "JSX"
-  }
+  },
+  "include": ["src"]
 }

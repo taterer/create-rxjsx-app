@@ -1,6 +1,6 @@
 import { map, Subject, takeUntil } from "rxjs";
-import { completeTodo, redoTodo } from "../../../domain/todo/command";
-import { getTodo } from "../../../domain/todo/query";
+import { completeTodo, redoTodo } from "../../domain/todo/command";
+import { getTodo } from "../../domain/todo/query";
 
 export default function Todo({ destruction$, id }) {
   const destroy$ = new Subject();

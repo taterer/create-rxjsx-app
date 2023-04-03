@@ -1,4 +1,4 @@
-import { Route } from "../../../domain/router";
+import { Route } from "../../domain/router";
 import NavbarItem from "./NavbarItem";
 
 export default function Navbar({ destruction$ }) {

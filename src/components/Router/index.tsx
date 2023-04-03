@@ -1,6 +1,6 @@
 import { firstPathChange$, subscribeToHistory } from "@taterer/rx-router";
 import { map, takeUntil } from "rxjs";
-import { routeRegExpMap } from "../../../domain/router";
+import { routeRegExpMap } from "../../domain/router";
 import Home from "../../views/Home";
 import Memory from "../../views/Memory";
 import Todo from "../../views/Todo";

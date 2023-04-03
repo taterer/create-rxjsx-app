@@ -1,6 +1,6 @@
 import { filter, map, takeUntil } from "rxjs";
-import { CounterEvent, newCounter } from "../../../domain/counter/command";
-import { counterEntity$ } from "../../../domain/counter/event";
+import { CounterEvent, newCounter } from "../../domain/counter/command";
+import { counterEntity$ } from "../../domain/counter/event";
 import Counter from "../../components/Counter";
 
 export default function Memory({ destruction$ }) {

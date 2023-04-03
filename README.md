@@ -19,9 +19,11 @@ Working with rx-jsx https://github.com/taterer/rx-jsx/tree/main/package
 Fast, easy, domain driven design.
 
 ### Compare to a create-react-app from install.
-Create react app: 1447 packages (6 high severity vulnerabilities), 48.38kB bundle (gzipped).
+Create react app: 1447 packages (6 high severity vulnerabilities), 48.38 kB gzip bundle.
 
-Create rxjsx app: 212 packages (0 vulnerabilities), 43.23kB bundle (un-gzipped ~12kB gzipped)
+Create rxjsx app (Parcel): 212 packages (0 vulnerabilities), ~12 kB gzip bundle (43.23kB uncompressed bundle)
+
+Create rxjsx app (Vite): 47 packages (0 vulnerabilities), 38.5 kB gzip bundle (169 kB uncompressed bundle)
 
 ## Where it all comes together
 Rx Entity framework
